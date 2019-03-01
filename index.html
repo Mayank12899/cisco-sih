@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Cisco app</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://code.s4d.io/widget-space/production/main.css">
+
+    </head>
+    <body>
+            <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+            <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
+        
+
+
+        <div class="nav" onclick=navHide()>
+            <div class="railwayroom" onclick=openRoom() >Railway Room</div>
+            <div class="head" onclick=openHead() >Pranay</div>
+            <div class="head" onclick=openBot() >BOT</div>
+
+
+        </div>
+        <div class="container">
+            <div class="btnCon">
+                <div class="btn" onclick=navVisble()></div>
+                <span>Cisco Help</span>               
+            </div>
+            <div id='my-webexteams-widget' class="room"></div>
+        </div>
+
+
+
+
+
+
+        <script>
+             var widgetEl = document.getElementById('my-webexteams-widget');
+            // Init a new widget
+            function openRoom(){
+            ciscospark.widget(widgetEl).spaceWidget({
+            accessToken: 'ZWE4ZjZjNjMtYTY3NS00NTg2LTlkNjMtYzhmMDU2MGZlNmVhYzNmMjI4ZTAtZTZl_PF84_consumer',
+            destinationId: 'Y2lzY29zcGFyazovL3VzL1JPT00vZDJmZGUwOTAtOWQwYy0xMWU1LWFlZWQtMjE3NmZkY2Q4YTU4',
+            destinationType: 'spaceId'
+            });
+            }
+            //openRoom();
+            function openHead(){
+                ciscospark.widget(widgetEl).spaceWidget({
+                    accessToken: 'ZWE4ZjZjNjMtYTY3NS00NTg2LTlkNjMtYzhmMDU2MGZlNmVhYzNmMjI4ZTAtZTZl_PF84_consumer',
+                    destinationId: 'lobopranayk9@gmail.com',
+                    destinationType: 'email'
+                });
+            }
+
+            function openBot(){
+                ciscospark.widget(widgetEl).spaceWidget({
+                    accessToken: 'ZWE4ZjZjNjMtYTY3NS00NTg2LTlkNjMtYzhmMDU2MGZlNmVhYzNmMjI4ZTAtZTZl_PF84_consumer',
+                    destinationId: 'albin_bot@webex.bot',
+                    destinationType: 'email'
+                });
+            }
+            function navVisble(){
+                 $('.nav').addClass('navV');
+            }
+            function navHide(){
+                $('.nav').removeClass('navV');
+            }
+        
+        </script>
+    </body>
+</html>  
